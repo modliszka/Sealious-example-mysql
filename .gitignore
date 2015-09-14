@@ -1,0 +1,6 @@
+node_modules/sealious/
+node_modules/sealious-channel-rest/
+node_modules/path/
+node_modules/bluebird/
+npm-debug.log
+authentication.js
