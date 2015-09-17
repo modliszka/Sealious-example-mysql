@@ -9,7 +9,7 @@ require("./field_types/field_type.subcategory.js");
 Sealious.init();
 
 Sealious.ConfigManager.set_default_config(
-	"datastore_mysql", 
+	"datastore_chip_name", 
 	data
 );
 
@@ -49,4 +49,4 @@ www_server.static_route(path.resolve( __dirname, "./public"), "");
 
 DatastoreMysql.start();
 
-//Sealious.start();
+Sealious.start();
