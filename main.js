@@ -17,9 +17,13 @@ var www_server = Sealious.ChipManager.get_chip("channel", "www_server");
 var places = new Sealious.ChipTypes.ResourceType({name: "places",
 	fields:[
 	    {name: "name", type: "text"},
-	    {name: "address", type: "text"},
+	    //zmiana na int z text
+	    {name: "address", type: "int"},
 	    {name: "city", type: "text"},
 	    {name: "country", type: "text"},
+
+	    //dodane
+	    {name: "region", type:"text"},
 	    
 	    {name: "category", type: "category"},
 	    {name: "subcategory", type: "subcategory"},
@@ -48,4 +52,4 @@ www_server.static_route(path.resolve( __dirname, "./public"), "");
 
 DatastoreMysql.start();
 
-Sealious.start();
+//Sealious.start();
