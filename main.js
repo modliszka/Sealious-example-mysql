@@ -45,8 +45,21 @@ var places = new Sealious.ChipTypes.ResourceType({name: "places",
 	access_strategy: "public"
 });
 
+var students = new Sealious.ChipTypes.ResourceType({name: "students",
+	fields:[
+	    {name: "name", type: "text"},
+	    //zmiana na int z text
+	    {name: "age", type: "int"},
+	   
+	],
+	access_strategy: "public"
+});
+
+
+
 var rest = Sealious.ChipManager.get_chip("channel", "rest");
 rest.add_path("/api/v1/places", "places");
+rest.add_path("/api/v1/students", "students");
 
 www_server.static_route(path.resolve( __dirname, "./public"), "");
 
