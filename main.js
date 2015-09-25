@@ -63,6 +63,6 @@ rest.add_path("/api/v1/students", "students");
 
 www_server.static_route(path.resolve( __dirname, "./public"), "");
 
-DatastoreMysql.start();
+//DatastoreMysql.start();
 
-//Sealious.start();
+Sealious.start();
